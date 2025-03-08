@@ -1,0 +1,162 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+.blog-sec{
+    height: 100vh;
+    background-image: url(https://lof8sc.yourbrand.studio/files/dynamicContent/sites/lof8sc/images/en/webpage_17/m5p6cvmf/element_289/rwdMode_1/2400x700/blog_main.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.logo img {
+    height: 50px;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-links li a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid black;
+    background: transparent;
+    color: black;
+    cursor: pointer;
+    border-radius: 25px;
+    width: 200px;
+    text-transform: uppercase;
+}
+button:hover {
+    background: black;
+    color: white;
+}
+.blog-box{
+    font-size: 48px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.blog-box h3 {
+    font-size: 24px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+.blog-box button {
+    background: white;
+    color: black;
+    font-weight: bold;
+    margin-top: 20px;
+    border: none;
+}
+.blog-box button:hover {
+    background: black;
+    color: white;
+}
+.blog-sec2 {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+    background-color: #f9f9f9;
+}
+.blog-container {
+    
+
+    transition: transform 0.1s ease-in-out;
+}
+/*.blog-container:hover {
+    transform: scale(1.02);
+}*/
+.blog-container img {
+    width: 400px;
+    height: 200px;
+    object-fit: cover;
+}
+.ideas {
+    padding-block: 20px;
+}
+.ideas h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #333;
+}
+.ideas p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.ideas h6 {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #3b8257;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.ideas h6:hover {
+    text-decoration: underline;
+}
+.icons {
+    background-color: #4a5a62; 
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    height: 30vh;
+}
+.icons p:first-child {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.social-icons i {
+    font-size: 24px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.footer-text {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-text span {
+    color: #50C878; 
+    font-weight: bold;
+}

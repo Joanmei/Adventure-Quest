@@ -1,0 +1,480 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/* Logo */
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+/* Book Now Button */
+.book-now {
+    background: #ff8c00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.book-now:hover {
+    background: #e67e22;
+}
+/* Mobile Navigation */
+.nav-toggle {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+/* Booking Form Overlay */
+.booking-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Show the booking form when active */
+.booking-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Booking Form Container */
+.booking-form {
+    background: #fff;
+    padding: 25px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Close Button */
+.close-booking {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #ff4d4d;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+/* Form Heading */
+.booking-form h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #2c5364;
+}
+
+/* Form Inputs & Select */
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Special Requests (Textarea) */
+.form-group textarea {
+    height: 80px;
+    resize: none;
+}
+/* Submit Button */
+.submit-booking {
+    background: #ff8c00;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.submit-booking:hover {
+    background: #e67e22;
+}
+/* Gallery Section Styling */
+.gallery-section {
+    text-align: center;
+    padding: 50px 20px;
+    background: #f5f5f5;
+}
+
+.gallery-section h2 {
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.gallery-section p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Gallery Navigation */
+.gallery-nav {
+    margin-bottom: 20px;
+}
+
+.gallery-nav button {
+    background: #ff8c00;
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.gallery-nav button:hover {
+    background: #e67e22;
+}
+
+/* Slideshow Gallery */
+.slideshow-gallery {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+}
+
+.main-slide {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Thumbnails */
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.thumbnail {
+    width: 80px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.3s;
+}
+
+.thumbnail:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+.thumbnail.active {
+    border: 3px solid #ff8c00;
+}
+/* Grid Gallery Styling */
+.grid-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Individual Grid Items */
+.grid-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Hover Effect */
+.grid-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Overlay Effect */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.grid-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Overlay Text */
+.overlay h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+/* Custom Gallery Styling */
+.custom-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Individual Gallery Items */
+.custom-gallery .item {
+    flex: 1 1 calc(33.33% - 20px); /* Three items per row */
+    max-width: calc(33.33% - 20px);
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.custom-gallery .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Hover Effect */
+.custom-gallery .item:hover img {
+    transform: scale(1.1);
+}
+/* General Styling for Gallery 4 */
+.gallery4-content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.gallery4-section {
+    margin-bottom: 50px;
+}
+
+/* ================= EXTRAORDINARY ADVENTURE SECTION ================= */
+.extraordinary-adventure {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.left-column {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.right-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.slide-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: none;
+    border-radius: 10px;
+}
+
+.slide-image.active {
+    display: block;
+}
+
+.thumbnail-extraordinary {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.thumbnail-extraordinary.active {
+    transform: scale(1.1);
+    border: 2px solid #ff6600;
+}
+
+/* ================= FEEL THE EMOTION SECTION ================= */
+.feel-emotion {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.emotion-left {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.emotion-left img {
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.emotion-left img.active {
+    transform: scale(1.1);
+    border: 2px solid #ff6600;
+}
+
+.emotion-center {
+    flex-grow: 1;
+    position: relative;
+}
+
+.emotion-slide {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: none;
+    border-radius: 10px;
+}
+
+.emotion-slide.active {
+    display: block;
+}
+
+.icons {
+    background-color: #4a5a62; 
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+}
+.icons p:first-child {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.social-icons i {
+    font-size: 24px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.footer-text {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-text span {
+    color: #50C878; 
+    font-weight: bold;
+}

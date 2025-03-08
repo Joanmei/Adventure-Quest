@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contact-sec{
+    height: 120vh;
+    background-image: url(https://lof8sc.yourbrand.studio/files/dynamicContent/sites/lof8sc/images/en/webpage_16/m5p6cseu/element_285/2/rwdMode_1/2400x658/about-us_1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.logo img {
+    height: 50px;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin-left: 200px;
+}
+.nav-links li a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid black;
+    background: transparent;
+    color: black;
+    cursor: pointer;
+    border-radius: 25px;
+    width: 200px;
+    text-transform: uppercase;
+}
+button:hover {
+    background: black;
+    color: white;
+}
+.cont-box {
+    padding: 20px;
+    max-width: 300px;
+    min-height: 350px;
+    text-align: center;
+    margin-left: 200px;
+}
+.cont-box h3 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+.cont-box p {
+    font-size: 20px;
+    margin: 10px 0;
+}
+.cont-box a {
+    text-decoration: none;
+    color: seagreen;
+    font-weight: bold;
+}
+.cont-box a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+.map-sec{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 150px;
+    height: 100vh;
+}
+.map-container {
+    width: 80vw;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    margin-top: -300px;
+} 
+.frame {
+    width: 100%;
+    height: 550px;
+}
+.form-container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+.contact-form {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+.contact-form label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 0.5px solid #ccc;
+    font-size: 20px;
+}
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+.contact-form button {
+    background-color: #7f9f8c; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px;
+    display: block;
+    margin: 0px auto;
+}
+.contact-form button:hover {
+    background-color: #67806d;
+}
+.icons {
+    background-color: #4a5a62; 
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+}
+.icons p:first-child {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.social-icons i {
+    font-size: 24px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.footer-text {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-text span {
+    color: #50C878; 
+    font-weight: bold;
+}

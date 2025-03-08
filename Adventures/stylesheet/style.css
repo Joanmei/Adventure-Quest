@@ -1,0 +1,223 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+.hero-sec{
+    height: 100vh;
+    background-image: url(https://lof8sc.yourbrand.studio/files/dynamicContent/sites/lof8sc/images/en/webpage_13/m5p6d1a5/element_252/rwdMode_1/2400x700/main.webp);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.logo img {
+    height: 50px;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-links li a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid black;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+    width: 200px;
+}
+button:hover {
+    background: black;
+    color: white;
+}
+.hero-box{
+    font-size: 48px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+.hero-box h3 {
+    font-size: 24px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+.hero-box button {
+    background: white;
+    color: black;
+    font-weight: bold;
+    margin-top: 20px;
+}
+.hero-box button:hover {
+    background: black;
+    color: white;
+}
+.adventure-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    height: 150vh;
+    padding: 40px;
+    margin-block: 30px;
+}
+.adventure-card {
+    text-align: center;
+    padding: 20px;
+    width: 60%;
+    color: #4e5e66;
+    font-weight: normal;
+}
+.adventure-card h2{
+    font-size: 34px;
+    line-height: 40px;
+    margin-bottom: 15px
+}
+.adventure-card p{
+    line-height: 27px;
+    font-size: 17px;
+}
+.adventure-card1{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.adventure-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-left: 30px;
+}
+
+.adventure-text h4{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.adventure-text p{
+    text-align: center;
+    font-size: 21px;
+    line-height: 31px;
+    margin-bottom: 20px;
+}
+.adventure-btn {
+    background-color: #5a8f7b;
+    color: white;
+    border: none;
+}
+.adventure-btn:hover {
+    background: #83e2be;
+}
+.gallery-sec{
+    text-align: center;
+    padding: 40px;
+}
+.grid-container{
+    background-color: lightgrey;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    height: 140vh;
+    gap: 20px;
+}
+.grid-container > div{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.grid-container > div:nth-child(1){
+    background-image: url(https://lof8sc.yourbrand.studio/files/dynamicContent/sites/lof8sc/images/en/webpage_13/m5p6d1a5/element_265/rwdMode_1/491x734/Gallery_1.webp);
+    grid-row: 1/6;
+}
+.grid-container > div:nth-child(2){
+    background-image: url(https://lof8sc.yourbrand.studio/files/dynamicContent/sites/lof8sc/images/en/webpage_13/m5p6d1a5/element_266/rwdMode_1/689x379/Gallery_2.webp);
+    grid-column: 2 / 4;
+    grid-row: 1/4;
+}
+.grid-container > div:nth-child(3){
+    background-image: url(https://lof8sc.yourbrand.studio/files/dynamicContent/sites/lof8sc/images/en/webpage_13/m5p6d1a5/element_267/rwdMode_1/334x334/Gallery_3.webp);
+    grid-column: 2/3;
+    grid-row: 4/6;
+}
+.grid-container > div:nth-child(4){
+    background-image: url(https://lof8sc.yourbrand.studio/files/dynamicContent/sites/lof8sc/images/en/webpage_13/m5p6d1a5/element_268/rwdMode_1/333x333/Gallery_4.webp);
+    grid-column: 3 / 4;
+    grid-row: 4/6;
+}
+.quizes{
+    display: flex;
+    align-items: center; 
+    justify-content: space-around;
+    margin-block: 20px;
+    font-weight: bold;
+    font-size: 28px;
+}
+.quizes button {
+    background-color: #5a8f7b;
+    color: white;
+    border: none;
+}
+.aquizes:hover {
+    background: #83e2be;
+}
+.icons {
+    background-color: #4a5a62; 
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+}
+.icons p:first-child {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.social-icons i {
+    font-size: 24px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.footer-text {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-text span {
+    color: #50C878; 
+    font-weight: bold;
+}

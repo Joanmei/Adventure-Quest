@@ -1,0 +1,148 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+.nav{
+    background-color: #3b8257;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.logo img {
+    height: 50px;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.nav-links li a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid black;
+    background: white;
+    color: black;
+    cursor: pointer;
+    border-radius: 25px;
+    width: 200px;
+}
+button:hover {
+    background: black;
+    color: white;
+}
+.offer-section {
+    height: 10vh;
+}
+.offer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 30px 50px;
+}
+.canoeing,
+.offroad,
+.Rock-climbing {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    gap: 30px;
+}
+.Rock-climbing img{
+    width: 40%;
+}
+.image {
+    width: 40%;
+}
+.image img {
+    width: 100%;
+    height: auto;
+}
+.content {
+    width: 60%;
+}
+.content h2 {
+    font-size: 28px;
+    font-weight: bold;
+}
+.content h3 {
+    font-size: 20px;
+    margin-block: 10px;
+}
+
+.content p {
+    font-size: 18px;
+    margin-bottom: 15px;
+    line-height: 25px;
+    color: #555;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #3b8257;
+}
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background: transparent;
+    background-color: #3b8257;
+    color: white;
+    cursor: pointer;
+    border-radius: 25px;
+    width: 200px;
+}
+.icons {
+    background-color: #4a5a62; 
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    height: 30vh;
+}
+.icons p:first-child {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.social-icons i {
+    font-size: 24px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.footer-text {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-text span {
+    color: #50C878; 
+    font-weight: bold;
+}

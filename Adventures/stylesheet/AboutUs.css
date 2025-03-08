@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.about-sec{
+    height: 80vh;
+    background-image: url(https://lof8sc.yourbrand.studio/files/dynamicContent/sites/lof8sc/images/en/webpage_16/m5p6cseu/element_285/2/rwdMode_1/2400x658/about-us_1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.logo img {
+    height: 50px;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    gap: 40px;
+    margin-left: 200px;
+}
+.nav-links li a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+}
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid black;
+    background: transparent;
+    color: black;
+    cursor: pointer;
+    border-radius: 25px;
+    width: 200px;
+    text-transform: uppercase;
+}
+button:hover {
+    background: black;
+    color: white;
+}
+.abou-sec {
+    background-color: white;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+.about-box {
+    max-width: 850px;
+    padding: 40px;
+    margin-top: -400px;
+    background-color: white;
+}
+.tittles{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.tittles h4 {
+    font-size: 30px;
+    font-weight: normal;
+}
+
+.tittles h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 60px;
+}
+.about-box p {
+    font-size: 20px;
+    color: #222;
+    line-height: 1.0;
+    margin-bottom: 10px;
+}
+.box-1, 
+.box-2 {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 20px;
+}
+.box-2{
+    flex-direction: row-reverse;
+}
+.box-1 img, 
+.box-2 img {
+    max-width: 300px;
+}
+.box-1 h3, .box-2 h3 {
+    font-size: 20px;
+    color: #222;
+    margin-bottom: 10px;
+}
+.icons {
+    background-color: #4a5a62; 
+    text-align: center;
+    padding: 20px 0;
+    color: white;
+    height: 30vh;
+}
+.icons p:first-child {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.social-icons i {
+    font-size: 24px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.footer-text {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-text span {
+    color: #50C878; 
+    font-weight: bold;
+}

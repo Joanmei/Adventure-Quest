@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>gallery</title>
+    <link rel="stylesheet" href="./stylesheet/gallery.css">
+</head>
+<body>
+    <!-- Header with Navbar -->
+    <header>
+        <nav class="navbar">
+            <!-- Logo -->
+            <div class="logo">Adventure</div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="offer.html"><i class="fas fa-tags"></i> Offer</a></li>
+                <li><a href="gallery.html"><i class="fas fa-images"></i> Gallery</a></li>
+                <li><a href="blog.html"><i class="fas fa-blog"></i> Blog</a></li>
+                <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+
+            <!-- Book Now Button -->
+            <button class="book-now" id="bookNowBtn" onclick="openBookingForm()">Book Now</button>
+
+            <!-- Nav Toggle Button (Visible on Mobile) -->
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Booking Form Overlay -->
+    <div class="booking-overlay" id="bookingOverlay">
+        <div class="booking-form">
+            <button class="close-booking" onclick="closeBookingForm()">×</button>
+            <h2>Book Your Adventure</h2>
+            <form id="adventureBookingForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Preferred Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="activity">Adventure Activity</label>
+                    <select id="activity" name="activity" required>
+                        <option value="">Select an activity</option>
+                        <option value="paragliding">Paragliding</option>
+                        <option value="hiking">Hiking</option>
+                        <option value="bungee">Bungee Jumping</option>
+                        <option value="rockclimbing">Rock Climbing</option>
+                        <option value="canoeing">Canoeing</option>
+                        <option value="camping">Camping</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="participants">Number of Participants</label>
+                    <input type="number" id="participants" name="participants" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="comments">Special Requests</label>
+                    <textarea id="comments" name="comments"></textarea>
+                </div>
+                <button type="submit" class="submit-booking">Submit Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <h2>Gallery</h2>
+        <p>
+            Explore our stunning collection of adventure photos. From breathtaking landscapes to thrilling activities, our gallery captures the essence of adventure.
+        </p>
+        <!-- Gallery Navigation -->
+        <div class="gallery-nav">
+            <button onclick="showGallery('slideshow')">Gallery 1</button>
+            <button onclick="showGallery('grid')">Gallery 2</button>
+            <button onclick="showGallery('custom')">Gallery 3</button>
+            <button onclick="showGallery('gallery4')">Gallery 4</button>
+        </div>
+
+        <!-- Slideshow Gallery (Gallery 1) -->
+        <div id="slideshow" class="gallery-content">
+            <div class="slideshow-gallery">
+                <img src="https://images.unsplash.com/photo-1545007805-a44ee83438fa?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb&dl=s-o-c-i-a-l-c-u-t-RzA6DUaiTl4-unsplash.jpg" alt="Gallery Image 1" class="main-slide" id="mainSlide">
+                
+                <div class="thumbnail-container">
+                    <img src="images/Gallery_2-kjbc8gcg.jpg" alt="Thumbnail 1" class="thumbnail active" onclick="changeMainSlide(0)">
+                    <img src="assests/Bali swing.jpg" alt="Thumbnail 2" class="thumbnail" onclick="changeMainSlide(1)">
+                    <img src="assests/download (1).jpg" alt="Thumbnail 3" class="thumbnail" onclick="changeMainSlide(2)">
+                    <img src="assests/Kaaterskill Falls Hike In Upstate New York (Upper Trail).jpg" alt="Thumbnail 4" class="thumbnail" onclick="changeMainSlide(3)">
+                    <img src="assests/Find a Cruise _ Search the Best Cruises for 2025 & 2026.jpg" alt="Thumbnail 5" class="thumbnail" onclick="changeMainSlide(4)">
+                    <img src="assests/download (3).jpg" alt="Thumbnail 6" class="thumbnail" onclick="changeMainSlide(5)">
+                </div>
+            </div>
+        </div>
+
+        <!-- Grid Gallery (Gallery 2) -->
+        <div id="grid" class="gallery-content">
+            <div class="grid-gallery">
+                <div class="grid-item">
+                    <img src="assests/Gallery2 1.jpg" alt="Bungee Jumping">
+                    <div class="overlay">
+                        <h3>Bungee Jumping</h3>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="assests/gallery2 camping.jpg" alt="Camping">
+                    <div class="overlay">
+                        <h3>Camping</h3>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="assests/gallery2 adventure.jpg" alt="Adventure">
+                    <div class="overlay">
+                        <h3>Adventure</h3>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="assests/exploration gallery2.jpg" alt="Exploration">
+                    <div class="overlay">
+                        <h3>Exploration</h3>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="assests/gallery2 hiking.jpg" alt="Hiking">
+                    <div class="overlay">
+                        <h3>Hiking</h3>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="assests/gallery2 mountainview.jpg" alt="Mountain View">
+                    <div class="overlay">
+                        <h3>Mountain View</h3>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="assests/gallery2 water sports.jpg" alt="Water Sports">
+                    <div class="overlay">
+                        <h3>Water Sports</h3>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="assests/Gallery2 rockclimbing.jpg" alt="Rock Climbing">
+                    <div class="overlay">
+                        <h3>Rock Climbing</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Custom Layout Gallery (Gallery 3) - Fixed layout -->
+        <div id="custom" class="gallery-content">
+            <div class="custom-gallery">
+                <div class="item">
+                    <img src="assests/download.jpg" alt="Gallery Image 1">
+                </div>
+                <div class="item">
+                    <img src="assests/0d019f1c-8886-455b-88a2-ae210a23523f.jpg" alt="Gallery Image 2">
+                </div>
+                <div class="item">
+                    <img src="assests/Mountainside Views.jpg" alt="Gallery Image 3">
+                </div>
+                <div class="item">
+                    <img src="assests/698664fb-7495-411e-bbd1-aa989662e2be.jpg" alt="Gallery Image 4">
+                </div>
+                <div class="item">
+                    <img src="assests/Bungee Jumping - The Bloukrans Bridge.jpg" alt="Gallery Image 5">
+                </div>
+                <div class="item">
+                    <img src="assests/Nature aesthetic _ nature _ camping _ camping aesthetic.jpg" alt="Gallery Image 6">
+                </div>
+                <div class="item">
+                    <img src="assests/canoning.jpg" alt="Gallery Image 7">
+                </div>
+                <div class="item">
+                    <img src="assests/35+ Fun Water Sports and Activities to Try at Least
+                    Once.jpg" alt="Gallery Image 8">
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery 4 -->
+        <div id="gallery4" class="gallery-content">
+            <div class="gallery4-content">
+                <!-- Extraordinary Adventure Section -->
+                <div class="gallery4-section">
+                    <h3>Extraordinary Adventure</h3>
+                    <div class="extraordinary-adventure">
+                        <div class="left-column">
+                            <p>
+                                Embark on extraordinary adventures that will take your breath away. From paragliding over pristine landscapes to diving in crystal-clear waters, our adventure packages offer unforgettable experiences for thrill-seekers and nature lovers alike.
+                            </p>
+                            <p>
+                                Our team of experienced guides ensures your safety while you push your limits and create memories that will last a lifetime. Discover the beauty of our planet from perspectives few have experienced.
+                            </p>
+                        </div>
+                        <div class="right-column">
+                            <img src="assests/Extraordinary Adventure 1.jpg" alt="Adventure 1" class="slide-image active" id="extraordinary-slide-1">
+                            <img src="assests/Extraordinary Adventure 2.jpg" alt="Adventure 2" class="slide-image" id="extraordinary-slide-2">
+                            <img src="assests/Extraordinary Adventure 3.jpg" alt="Adventure 3" class="slide-image" id="extraordinary-slide-3">
+                            <img src="assests/Extraordinary Adventure4.jpg" alt="Adventure 4" class="slide-image" id="extraordinary-slide-4">
+                        </div>
+                    </div>
+                    <div class="thumbnail-container" style="margin-top: 20px;">
+                        <img src="assests/Extraordinary Adventure 1.jpg" alt="Thumbnail 1" class="thumbnail-extraordinary active" id="extraordinary-thumb-1">
+                        <img src="assests/Extraordinary Adventure 2.jpg" alt="Thumbnail 2" class="thumbnail-extraordinary" id="extraordinary-thumb-2">
+                        <img src="assests/Extraordinary Adventure 3.jpg" alt="Thumbnail 3" class="thumbnail-extraordinary" id="extraordinary-thumb-3">
+                        <img src="assests/Extraordinary Adventure4.jpg" alt="Thumbnail 4" class="thumbnail-extraordinary" id="extraordinary-thumb-4">
+                    </div>
+                </div>
+
+                <!-- Feel the Emotion Section - Fixed vertical layout -->
+                <div class="gallery4-section">
+                    <h3>Feel the Emotion</h3>
+                    <div class="feel-emotion">
+                        <div class="emotion-left" id="emotion-thumbnails">
+                            <img src="assests/Emotion1.jpg" alt="Emotion 1" class="active" onclick="changeEmotionSlide(0)">
+                            <img src="assests/Emotion2.jpg" alt="Emotion 2" onclick="changeEmotionSlide(1)">
+                            <img src="assests/Emotion3.jpg" alt="Emotion 3" onclick="changeEmotionSlide(2)">
+                            <img src="assests/Emotion4.jpg" alt="Emotion 4" onclick="changeEmotionSlide(3)">
+                        </div>
+                        <div class="emotion-center">
+                            <img src="assests/Emotion1.jpg" alt="Emotion slide 1" class="emotion-slide active" id="emotion-slide-0">
+                            <img src="assests/Emotion2.jpg" alt="Emotion Slide 2" class="emotion-slide" id="emotion-slide-1">
+                            <img src="assests/Emotion3.jpg" alt="Emotion Slide 3" class="emotion-slide" id="emotion-slide-2">
+                            <img src="assests/Emotion4.jpg" alt="Emotion Slide 4" class="emotion-slide" id="emotion-slide-3">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Get Carried Away Section -->
+                <div class="gallery4-section get-carried-away">
+                    <h3>Get Carried Away</h3>
+                    <div class="carried-away-gallery">
+                        <div class="carried-away-item">
+                            <img src="assests/Carried Away1.jpg" alt="Carried Away 1">
+                        </div>
+                        <div class="carried-away-item">
+                            <img src="assests/Carried Away2.jpg" alt="Carried Away 2">
+                        </div>
+                        <div class="carried-away-item">
+                            <img src="assests/Carried Away3.jpg" alt="Carried Away 3">
+                        </div>
+                        <div class="carried-away-item">
+                            <img src="assests/Carried Away4.jpg" alt="Carried Away 4">
+                        </div>
+                        <div class="carried-away-item">
+                            <img src="assests/Carried Away5.jpg" alt="Carried Away 5">
+                        </div>
+                        <div class="carried-away-item">
+                            <img src="assests/Carried Away6.jpg" alt="Carried Away 6">
+                        </div>
+                        <div class="carried-away-item">
+                            <img src="assests/Carried Away7.jpg" alt="Carried Away 7">
+                        </div>
+                        <div class="carried-away-item">
+                            <img src="assests/Carried Away8.jpg" alt="Carried Away 8">
+                        </div>
+                    </div>
+                    <div class="carried-away-slideshow">
+                        <img src="assests/Carried Away1.jpg" alt="Slideshow 1" class="carried-away-slide active">
+                        <img src="assests/Carried Away2.jpg" alt="Slideshow 2" class="carried-away-slide">
+                        <img src="assests/Carried Away3.jpg" alt="Slideshow 3" class="carried-away-slide">
+                        <img src="assests/Carried Away4.jpg" alt="Slideshow 4" class="carried-away-slide">
+                        <img src="assests/Carried Away5.jpg" alt="Slideshow 5" 
+                        class="carried-away-slide">
+                        <img src="assests/Carried Away6.jpg" alt="Slideshow 6" class="carried-away-slide">
+                        <img src="assests/Carried Away7.jpg" alt="Slideshow 7" class="carried-away-slide">
+                        <img src="assests/Carried Away8.jpg" alt="Slideshow 8" class="carried-away-slide">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="icons">
+        <p>Check us out:</p>
+        <div class="social-icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <p class="footer-text">A website created by <span>Joan</span> Jepkemei.</p>
+    </footer>
+
+    <script src="./javascript/gallery.js"></script>
+</body>
+</html>
